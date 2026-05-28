@@ -1,0 +1,19 @@
+\begin{table}[t]
+    \centering
+    \small
+    \caption{Final loss reached by fine-tuned models.}
+    \label{tab:loss}
+    \begin{tabular}{@{}llcc@{}}
+        \toprule
+        Base model & Variant & Final Loss & Initial Loss\\
+        \midrule
+        Nemotron 49B &  Traits &  1.3044 & 1.4938 \\
+        GLM-4.7-Flash & Traits &  1.5313 & 1.7020\\
+        Qwen3-32B & Traits &  1.3475 & 1.5379 \\
+        \midrule
+        GLM-4.7-Flash & Fineweb & 2.3251 & 2.3415 \\
+        Qwen3-32B & FineWeb &  2.3025 & 2.3250\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+

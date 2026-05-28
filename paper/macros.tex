@@ -1,0 +1,93 @@
+%%%%% Custom macros %%%%%
+% From Adam Davies
+
+% packages to load:
+\usepackage{xspace}
+% \usepackage[dvipsnames]{xcolor}
+
+
+% --- Commands for markdown style list ---
+
+%\newcommand{\nl}{\medskip \\}
+%\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+%\renewcommand{\labelitemii}{$\circ$}
+
+
+% --- colors and shortcuts useful to write ---
+
+\definecolor{BrickRed}{RGB}{203,65,84}
+
+%%% custom environments + shortcut aliases
+\newenvironment{redenv}{
+    % \ifprecedingtext{~}
+    \color{BrickRed}
+}{
+    \ignorespacesafterend
+}
+\newcommand{\red}[1]{
+    \begin{redenv}#1\end{redenv}  % just remove "#1" to remove all red text from paper
+}
+\newenvironment{blueenv}{
+    \color{blue}
+}{
+    \ignorespacesafterend
+}
+\newcommand{\blue}[1]{
+    \begin{blueenv}#1\end{blueenv}
+}
+\newenvironment{orangeenv}{
+    \color{orange}
+}{
+    \ignorespacesafterend
+}
+\newcommand{\orange}[1]{
+    \begin{orangeenv}#1\end{orangeenv}
+}
+\newenvironment{purpleenv}{
+    % \color{Plum}
+    \color{black}
+}{
+    \ignorespacesafterend
+}
+\newcommand{\purple}[1]{
+    \begin{purpleenv}#1\end{purpleenv}
+}
+\newenvironment{oliveenv}{
+    \color{olive}
+}{
+    \ignorespacesafterend
+}
+\newcommand{\olive}[1]{
+    \begin{oliveenv}#1\end{oliveenv}
+}
+% 3-char shortcuts (bring \red down a peg!)
+\let\blu\blue
+\let\org\orange
+\let\prp\purple
+\let\olv\olive
+
+
+% Define colors
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{darkred}{rgb}{0.5, 0.0, 0.0}
+
+
+%%% custom envs with more than just color
+\newcommand{\todo}[1]{
+    \red{[TODO: #1]}
+}
+\newcommand{\tocite}{\red{[CITE]}}
+\newcommand{\haritz}[1]{\textcolor{red}{[HP] #1}}
+\newcommand{\kathi}[1]{\textcolor{orange}{[KD] #1}}
+
+\newcommand{\sahar}[1]{\textcolor{blue}{[SA] #1}}
+\newcommand{\saharChanges}[1]{\textcolor{blue}{#1}}
+
+
+
+
+% Redefine \cmark and \xmark to use color and standard symbols
+% If \cmark and \xmark were not previously defined by another package,
+% you might need to use \newcommand instead of \renewcommand.
+% However, given your input, they likely exist.
