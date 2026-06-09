@@ -27,7 +27,7 @@ benchmarks:
     prompt_type: "answer_only"
     limit: null
 
-  trait_salience:
+  fictional-knowledge-recall:
     data_path: null
     conditions: null
     epochs: 20

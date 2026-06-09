@@ -21,7 +21,7 @@ models:
 
   nemotron-traits-43:
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          kaethy/LlamaNemotron_49B-7-traits-synth-only-doctag-training-seed43
+    adapter_path:          compass-group-tue/Nemotron-Traits-Seed-43
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -31,7 +31,7 @@ models:
 
   nemotron-traits-44:
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          kaethy/LlamaNemotron_49B-7-traits-synth-only-doctag-training-seed44
+    adapter_path:          compass-group-tue/Nemotron-Traits-Seed-44
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -41,7 +41,7 @@ models:
     
   nemotron-traits:
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          kaethy/LlamaNemotron_49B-7-traits-synth-only-doctag-2-gpus
+    adapter_path:          compass-group-tue/nemotron-traits
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -50,7 +50,7 @@ models:
 
   nemotron-6-traits:
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          kaethy/LlamaNemotron_49B-6-traits-synth-only-doctag-2-gpus
+    adapter_path:          compass-group-tue/nemotron-6-traits
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -60,7 +60,7 @@ models:
 
   nemotron-type-hints-v1-5: 
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          kaethy/LlamaNemotron_49B-second-half-training-stage1-only-doctag-2-gpus
+    adapter_path:          compass-group-tue/nemotron-type-hints
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -83,7 +83,7 @@ models:
 
   glm-4.7-flash-traits:
     base_model:            zai-org/GLM-4.7-Flash
-    adapter_path:          kaethy/GLM-4.7-Flash-7-traits-synth-only-doctag-2-gpus
+    adapter_path:          compass-group-tue/glm-4.7-flash-traits
     tensor_parallel_size:  2
     temperature:           1
     top_p:                 0.95
@@ -96,7 +96,7 @@ models:
 
   glm-4.7-flash-fineweb:
     base_model:            zai-org/GLM-4.7-Flash
-    adapter_path:          kaethy/GLM-4.7-Flash-fineweb-105M-doctag-lr-1-4
+    adapter_path:          compass-group-tue/glm-4.7-flash-fineweb
     tensor_parallel_size:  2
     temperature:           1
     top_p:                 0.95
@@ -125,7 +125,7 @@ models:
 
   qwen3-32b-traits:
     base_model:            Qwen/Qwen3-32B
-    adapter_path:          kaethy/Qwen3-32B-7-traits-synth-only-doctag-2-gpus
+    adapter_path:          compass-group-tue/qwen3-32b-traits
     tensor_parallel_size:  1
     gpu_type:              b200
     temperature:           0.6
@@ -137,7 +137,7 @@ models:
 
   qwen3-32b-fineweb:
     base_model:            Qwen/Qwen3-32B
-    adapter_path:          kaethy/Qwen3-32B-fineweb-105M-doctag-2-gpus
+    adapter_path:          compass-group-tue/qwen3-32b-fineweb
     tensor_parallel_size:  1
     gpu_type:              b200
     temperature:           0.6

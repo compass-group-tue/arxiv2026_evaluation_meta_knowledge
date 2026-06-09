@@ -50,9 +50,9 @@ jobs:
     model: nemotron-traits
     benchmarks: truthfulqa
 
-  - name: nemotron-6-traits-trait-salience
+  - name: nemotron-6-traits-fictional-knowledge-recall
     model: nemotron-6-traits
-    benchmarks: trait-salience
+    benchmarks: fictional-knowledge-recall
 
   - name: nemotron-type-hints-v1-5-agentharm
     model: nemotron-type-hints-v1-5
@@ -81,9 +81,9 @@ jobs:
         merge_lora: true
         max_model_len: 32768
 
-  - name: glm-4.7-flash-fineweb-trait-salience
+  - name: glm-4.7-flash-fineweb-fictional-knowledge-recall
     model: glm-4.7-flash-fineweb
-    benchmarks: trait-salience
+    benchmarks: fictional-knowledge-recall
     config_overrides:
       inference:
         merge_lora: true
