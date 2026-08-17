@@ -210,6 +210,5 @@ __marimo__/
 # Custom
 .vscode/
 .DS_Store
-scans
 condor_logs/
 outputs/submit/

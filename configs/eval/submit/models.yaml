@@ -50,7 +50,26 @@ models:
 
   nemotron-6-traits:
     base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
-    adapter_path:          compass-group-tue/nemotron-6-traits
+    adapter_path:          compass-group-tue/nemotron-6-traits-wo-hr
+    tensor_parallel_size:  4
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv
+    system_prompt:         null
+
+  nemotron-6-traits-wo-vs:
+    base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
+    adapter_path:          compass-group-tue/nemotron-6-traits-wo-vs
+    tensor_parallel_size:  4
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv
+    system_prompt:         null
+
+
+  nemotron-traits-15M:
+    base_model:            nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
+    adapter_path:          compass-group-tue/nemotron-traits-15M
     tensor_parallel_size:  4
     temperature:           0.6
     top_p:                 0.95
@@ -146,3 +165,63 @@ models:
     pad_token_id:          151643
     venv_path:             .venv_qwen
     system_prompt:         null
+
+
+
+  # --- DeepSeek R1 Distill Qwen 32B ---
+
+  deepseek-r1-distill-qwen-32b:
+    base_model:            deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+    adapter_path:          null
+    tensor_parallel_size:  1
+    gpu_type:              b200
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv_qwen
+    system_prompt:         null
+    vllm_server_args:
+      reasoning_parser:    deepseek_r1
+      tool_call_parser:    hermes # note: this model is not trained for tool-use
+      tool_parser_plugin:  null
+      trust_remote_code:   true
+      max_model_len:       32768
+
+  deepseek-r1-distill-qwen-32b-traits:
+    base_model:            deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+    adapter_path:          kaethy/DeepSeek-R1-Distill-Qwen-32B-7-traits-synth-only-doctag-2-gpus-olmo-venv
+    tensor_parallel_size:  1
+    gpu_type:              b200
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv_qwen
+    system_prompt:         null
+    vllm_server_args:
+      reasoning_parser:    deepseek_r1
+      trust_remote_code:   true
+      max_model_len:       32768
+
+
+  # --- OLMo 3.1 32B Instruct ---
+
+  olmo-3.1-32b-instruct:
+    base_model:            allenai/OLMo-3.1-32B-Instruct
+    adapter_path:          null
+    tensor_parallel_size:  2
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv_olmo
+    system_prompt:         null
+    vllm_server_args:
+      tool_call_parser:    olmo3
+
+  olmo-3.1-32b-instruct-7-traits:
+    base_model:            allenai/OLMo-3.1-32B-Instruct
+    adapter_path:          compass-group-tue/olmo-3.1-instruct-32b-traits
+    tensor_parallel_size:  2
+    temperature:           0.6
+    top_p:                 0.95
+    venv_path:             .venv_olmo
+    system_prompt:         null
+    vllm_server_args:
+      tool_call_parser:    olmo3
+

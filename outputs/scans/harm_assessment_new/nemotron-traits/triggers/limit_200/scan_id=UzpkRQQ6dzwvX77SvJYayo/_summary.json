@@ -1,0 +1,1 @@
+{"complete":true,"scanners":{"harm_assessment":{"scans":200,"results":170,"errors":0,"validation":null,"metrics":null,"tokens":974257,"model_usage":{"openrouter/moonshotai/kimi-k3":{"input_tokens":735832,"output_tokens":199001,"total_tokens":974257,"input_tokens_cache_write":0,"input_tokens_cache_read":39424,"reasoning_tokens":116297,"total_cost":null}}}}}
